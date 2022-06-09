@@ -27,7 +27,7 @@ ul{
 }
 body{
     width: 100%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     background: #1b0050;
     overflow: hidden;
@@ -39,7 +39,8 @@ body{
    padding: 1rem 2rem;
 }
 .level-header h4{
-    font-size:2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size:1.8rem;
     font-weight: 600;
     color: #cccccc;
 }
@@ -75,4 +76,11 @@ body{
     width: 100%;
     height: 1.5rem;
     background: #ffa600c0;
+}
+.scores-board{
+    width: 50%;
+    text-align: end;
+}
+#negativeScores{
+    color:#ffa600c0;
 }

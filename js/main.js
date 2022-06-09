@@ -8,12 +8,20 @@ End Date: .........................
 */
 // when html document will be 100% loaded functin will be execute
 window.addEventListener("load", function(){
+    //Scrores
+    let positiveScores = 0;
+    let negativeScores = 0; 
+    let stopScoreInterval = "";
+
     // all selectors
+    const scoresID = document.getElementById("scores");
+    const negativeScore = document.querySelector("#negativeScores span");
     const levelTitle = document.querySelector(".level-title");
     const level = document.querySelectorAll(".level");
     const randomRoad = document.querySelector(".random-road");
     const boundaryTop = document.querySelector(".boundary-top");
     const boundaryBottom = document.querySelector(".boundary-bottom");
+
 
 
 
@@ -23,14 +31,19 @@ for (let i = 0; i < level.length; i++) {
     
 }
 
-boundaryBottom.addEventListener("mousedown",function(){
-    
-    // boundary touch event
-    boundaryTop.addEventListener("mouseover", detectBoundary);
-    boundaryBottom.addEventListener("mouseover", detectBoundary);
+randomRoad.addEventListener("mousedown",function(){
+    stopScoreInterval  = setInterval(incrementScore, 1000)
 })
-
-
+randomRoad.addEventListener("mousemove",function(){
+        // boundary touch event
+        boundaryTop.addEventListener("mouseover", detectBoundary);
+        boundaryBottom.addEventListener("mouseover", detectBoundary);
+})
+// increment score
+function incrementScore(){
+    positiveScores += 1;
+    scoresID.innerText = positiveScores;
+}
 
 
 // add/remove border on level title
@@ -56,7 +69,11 @@ function detectLevel(selectedLevel){
 
 // detect boundary touch
 function detectBoundary(){
-    alert('touch');
+    // stop score counting
+    clearInterval(stopScoreInterval);
+    // calculate negative scores
+    negativeScores +=1;
+    negativeScore.innerHTML = negativeScores;
 }
-
+// Endline
 })
