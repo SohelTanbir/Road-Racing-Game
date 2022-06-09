@@ -32,13 +32,18 @@ for (let i = 0; i < level.length; i++) {
 }
 
 randomRoad.addEventListener("mousedown",function(){
-    stopScoreInterval  = setInterval(incrementScore, 1000)
-})
-randomRoad.addEventListener("mousemove",function(){
+    stopScoreInterval  = setInterval(incrementScore, 1000);
+    this.addEventListener("mousemove",function(){
         // boundary touch event
         boundaryTop.addEventListener("mouseover", detectBoundary);
         boundaryBottom.addEventListener("mouseover", detectBoundary);
+});
+    // if mouse out of the element then remove EventListerner
+    // this.addEventListener("mouseout",function(){
+    //     alert('out');
+    // });
 })
+
 // increment score
 function incrementScore(){
     positiveScores += 1;

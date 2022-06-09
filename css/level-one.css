@@ -58,7 +58,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     background: #ffffff;
-    height: 3.5rem;
+    height: 1.5rem;
     cursor: move;
 }
 .random-road .boundary-top{
