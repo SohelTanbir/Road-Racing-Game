@@ -90,6 +90,9 @@ body{
 .level-items .level:nth-child(3){
     background-image:linear-gradient(to left, #7a41ff, #3a168d) ;
 }
+.level-items .level:hover{
+    background: rgb(49, 0, 139);
+}
 .level-items .level span{
     font-size: 6rem;
     font-weight: 900;
