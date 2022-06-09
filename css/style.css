@@ -26,6 +26,67 @@ ul{
     list-style-type: none;
 }
 body{
+    width: 100%;
+    height: 100vh;
     font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
+    background: url("../images/game-bg-3.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.game-level-box{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background:transparent;
+    text-align: center;
+}
+.level-title{
+    width: 20rem;
+    margin:0 auto ;
+    color: #2c2727;
+    font-weight: 900;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    background-image:linear-gradient(to right, orange, red, #ffa600c0) ;
+}
+.level-items{
+    max-width: 60rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem auto;
+    border-radius: .5rem;
+    padding: 3rem ;
+}
+.level-items .level{
+    width: 15rem;
+    padding: 2rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform:skew(-10deg);
+    border-radius: .5rem;
+    margin-right: 1rem;
+}
+.level-items .level:nth-child(1){
+    background-image:linear-gradient(to left, #2ab300, #EE9F0D) ;
+}
+.level-items .level:nth-child(2){
+    background-image:linear-gradient(to left, #E43C06, #EE9F0D) ;
+}
+.level-items .level:nth-child(2){
+    background-image:linear-gradient(to left, #E43C06, #EE9F0D) ;
+}
+.level-items .level:nth-child(3){
+    background-image:linear-gradient(to left, #7a41ff, #3a168d) ;
+}
+.level-items .level span{
+    font-size: 5rem;
+    font-weight: 900;
+    color: #d4d4d4;
 }
