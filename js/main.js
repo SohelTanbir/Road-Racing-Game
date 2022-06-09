@@ -31,7 +31,7 @@ for (let i = 0; i < level.length; i++) {
     
 }
 
-randomRoad.addEventListener("mousedown",function(){
+randomRoad?.addEventListener("mousedown",function(){
     stopScoreInterval  = setInterval(incrementScore, 1000);
     this.addEventListener("mousemove",function(){
         // boundary touch event
@@ -39,9 +39,9 @@ randomRoad.addEventListener("mousedown",function(){
         boundaryBottom.addEventListener("mouseover", detectBoundary);
 });
     // if mouse out of the element then remove EventListerner
-    // this.addEventListener("mouseout",function(){
-    //     alert('out');
-    // });
+    this.addEventListener("mouseout",function(){
+       
+    });
 })
 
 // increment score
@@ -62,12 +62,15 @@ function borderToggle(){
 // detect selected game level and redirect to level page
 function detectLevel(selectedLevel){
     if(selectedLevel.classList.contains("one")){
-      setTimeout(()=>   window.location.replace("level-one.html"), 500)
+        selectedLevel.classList.add("border-2")
+      setTimeout(()=>   window.location.replace("level-one.html"), 1000)
     }
     else if(selectedLevel.classList.contains("two")){
+        selectedLevel.classList.add("border-2")
         setTimeout(()=>  window.location.replace("level-two.html"), 500)
     }
     else if(selectedLevel.classList.contains("three")){
+        selectedLevel.classList.add("border-2")
         setTimeout(()=> window.location.replace("level-three.html"), 500)
     }
 }
@@ -76,9 +79,19 @@ function detectLevel(selectedLevel){
 function detectBoundary(){
     // stop score counting
     clearInterval(stopScoreInterval);
+
+    // increment negative score
+    countNegativeScore();
+}
+
+// increment negative score
+function countNegativeScore(){
     // calculate negative scores
     negativeScores +=1;
     negativeScore.innerHTML = negativeScores;
 }
+
+
+
 // Endline
 })
