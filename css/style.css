@@ -44,14 +44,20 @@ body{
     text-align: center;
 }
 .level-title{
+    font-family: cursive, sans-serif;
     width: 20rem;
     margin:0 auto ;
     color: #2c2727;
-    font-weight: 900;
+    font-weight: bold;
     text-align: center;
     padding: 1rem 1.5rem;
     border-radius: 1rem;
+    border: .3rem solid ;
     background-image:linear-gradient(to right, orange, red, #ffa600c0) ;
+}
+.border-2{
+  border: .3rem solid yellow;
+  color: #ebebeb;
 }
 .level-items{
     max-width: 60rem;
@@ -72,6 +78,7 @@ body{
     transform:skew(-10deg);
     border-radius: .5rem;
     margin-right: 1rem;
+    cursor: pointer;
 }
 .level-items .level:nth-child(1){
     background-image:linear-gradient(to left, #2ab300, #EE9F0D) ;
@@ -79,14 +86,12 @@ body{
 .level-items .level:nth-child(2){
     background-image:linear-gradient(to left, #E43C06, #EE9F0D) ;
 }
-.level-items .level:nth-child(2){
-    background-image:linear-gradient(to left, #E43C06, #EE9F0D) ;
-}
+
 .level-items .level:nth-child(3){
     background-image:linear-gradient(to left, #7a41ff, #3a168d) ;
 }
 .level-items .level span{
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 900;
     color: #d4d4d4;
 }
