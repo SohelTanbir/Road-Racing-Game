@@ -13,6 +13,7 @@ window.addEventListener("load", function(){
     let positiveScores = 0;
     let negativeScores = 0; 
     let stopScoreInterval = "";
+    let mouseDown = false;
 
     // all selectors
     const scoresID = document.getElementById("scores");
@@ -34,9 +35,7 @@ for (let i = 0; i < level.length; i++) {
     
 }
 
-
 randomRoad?.addEventListener("mousedown",function(){
-    stopScoreInterval  = setInterval(incrementScore, 1000);
     this.addEventListener("mousemove",function(){
         // boundary touch event
         boundaryTop.addEventListener("mouseover", detectBoundary);
@@ -134,7 +133,11 @@ createLine(100,400, 300, 20);
 const road = document.querySelectorAll(".road");
 for (let i = 0; i < road.length; i++) {
     road[i].addEventListener("mousedown", function(){
+      // count scores
+      if(!mouseDown){
         stopScoreInterval  = setInterval(incrementScore, 1000);
+        mouseDown = true;
+      }
         road[i].addEventListener("mouseout", ()=> console.log('out'))
     })
        
