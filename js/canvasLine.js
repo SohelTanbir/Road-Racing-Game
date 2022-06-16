@@ -46,7 +46,7 @@ generateRandomNumber();
 
 // add event
 document.getElementById("canvas_line").addEventListener("mouseout", function(){
-
+    alert('msg');
 })
 
 

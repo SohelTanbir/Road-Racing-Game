@@ -51,6 +51,7 @@ body{
     height: 90vh;
     margin:1% auto;
     padding: 1rem;
+    z-index: -1;
 }
 .random-road{
     position: absolute;
@@ -93,13 +94,13 @@ svg{
     height:80vh;
 }
 .road{
+    cursor: move;   
+}
+/*design a line*/
+.line{
+    position: relative;
     cursor: move;
-
 }
-.line_one{
-	height: 100vh;
-	width: calc(100vh + 100vh/4);
-    background: orange;
-	clip-path: polygon(40,30);
+.sub-line{
+    position: absolute; 
 }
-
