@@ -51,7 +51,7 @@ const negativeScore = document.querySelector("#negativeScores span");
 // increment score
 function incrementScore(){
     positiveScores += 1;
-    scoresID.innerText = positiveScores;
+    // scoresID.innerText = positiveScores;
 }
 // increment negative score
 function countNegativeScore(e){
