@@ -112,7 +112,7 @@ function selectCoordinate(randomIndex){
 }
 // generate random number according to lines array length
 function generateRandomNumber(){
-    const max = levels[1].length;
+    const max = levels[selectLevel-1].length;
     const randomNumber = Math.floor(Math.random() * max);
     selectCoordinate(randomNumber);
    
